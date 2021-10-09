@@ -1,4 +1,6 @@
 #include "funQ2C.h"
+#include "FunDevice.h"
+#include "../functionQ/scrcpy/server.h"
 
 FunQ2C::FunQ2C(QObject *parent) : QObject(parent)
 {

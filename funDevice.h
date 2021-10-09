@@ -2,6 +2,7 @@
 #define _FUNDEVICE_H
 
 #include <QAxFactory>
+#include <QPixmap>
 #include "../functionQ/scrcpy/device.h"
 #include "../functionQ/scrcpy/controller/action.h"
 #include "../functionQ/scrcpy/adbprocess.h"
@@ -18,8 +19,14 @@ public:
 private:
     Action *action = Q_NULLPTR;
 public slots:
-    void deviceName(QString deviceName);
+    void Name(QString deviceName);
     QString getName();
+
+    QPixmap getPixmap();
+    uint &getFrameData();
+    int getFrameWidth();
+    int getFrameHeight();
+
     void goHome();
 };
 

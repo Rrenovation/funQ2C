@@ -2,9 +2,9 @@
 #define _FUNQ2C_H
 
 #include <QAxFactory>
-#include "FunDevice.h"
 
-#include "../functionQ/scrcpy/server.h"
+class FunDevice;
+class Server;
 
 class FunQ2C : public QObject
 {
@@ -15,13 +15,12 @@ class FunQ2C : public QObject
 public:
     explicit FunQ2C(QObject *parent = nullptr);
 signals:
-    void onsingal();
+//    void onsingal();
 
 public slots:
     QString ver() const;
     void startServer();
     void pushNewDevice(FunDevice *device);
-
 private:
     Server *mServer = Q_NULLPTR;
 };
