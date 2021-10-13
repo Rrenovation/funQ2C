@@ -32,6 +32,8 @@ typedef struct
 } InfoHead;
 #pragma pack()
 
+typedef void (__stdcall *FUNC)();
+
 
 class FunDevice : public Device
 {
@@ -45,6 +47,10 @@ public:
 private:
     Action *action = Q_NULLPTR;
     void *bmpBuff = Q_NULLPTR;
+    FUNC callBackFun;
+    uint8_t *data =Q_NULLPTR;
+    int width ;
+    int height;
 public slots:
     virtual void consumeFrame();
     int getFrameData();

@@ -20,8 +20,8 @@ if(MSVC)
     set(Qt5_DIR E:\\qt5_static\\lib\\cmake\\Qt5)
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SAFESEH:NO")
     set(CMAKE_SHARED_LINKER_FLAGS_RELEASE "${CMAKE_SHARED_LINKR_FLAGS} /SAFESEH:NO")
-	include_directories(${PROJECT_SOURCE_DIR}\\functionQ\\thrid_party\\ffmpeg\\include)
-	link_directories(${PROJECT_SOURCE_DIR}\\functionQ\\thrid_party\\ffmpeg\\lib)
+	include_directories(${PROJECT_SOURCE_DIR}\\functionQ\\thrid_party\\ffmpeg_new\\include)
+	link_directories(${PROJECT_SOURCE_DIR}\\functionQ\\thrid_party\\ffmpeg_new\\lib)
 
 endif()
 

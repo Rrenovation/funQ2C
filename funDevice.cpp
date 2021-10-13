@@ -11,6 +11,11 @@ FunDevice::~FunDevice()
 
 void FunDevice::consumeFrame()
 {
+    auto frame = getFrame();
+    data = frame->data;
+    width = frame->width;
+    height = frame->height;
+    callBackFun();
 }
 
 void FunDevice::setName(QString deviceName)
@@ -26,23 +31,20 @@ QString FunDevice::getName()
 
 int FunDevice::getFrameData()
 {
-    return (int)getDeviceFrame();
+    return (int)data;
 }
 
 int FunDevice::getWidth()
 {
-    return getDeviceWidth();
+    return width;
 }
 int FunDevice::getHeight()
 {
-    return getDeviceHeight();
+    return height;
 }
 
 int FunDevice::getBmpPicSize()
 {
-    int width = getWidth();
-    int height = getHeight();
-    auto data = getDeviceFrame();
 
     BmpHead m_BMPHeader = {0};
     InfoHead m_BMPInfoHeader = {0};
@@ -85,7 +87,7 @@ int FunDevice::getBmpPic()
 
 void FunDevice::callBack(int callback)
 {
-    registerCallBack((FUNC)callback);
+    callBackFun = (FUNC)callback;
 }
 
 void FunDevice::home()
