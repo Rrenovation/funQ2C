@@ -14,15 +14,19 @@ class FunQ2C : public QObject
     Q_CLASSINFO("EventsID", "{E1816BBA-BF5D-4A31-9855-D6BA432055FF}")
 public:
     explicit FunQ2C(QObject *parent = nullptr);
+    ~FunQ2C();
 signals:
-//    void onsingal();
+
 
 public slots:
     QString ver() const;
     void startServer();
-    void pushNewDevice(FunDevice *device);
+    FunDevice* pushNewDevice(QString deviceName);
+    void popDevice(QString deviceName);
 private:
+    const QString Version = "1.0.0";
     Server *mServer = Q_NULLPTR;
+    QMap<QString,FunDevice*> Devices;
 };
 
 #endif // _FUNQ2C_H
