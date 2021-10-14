@@ -162,10 +162,10 @@ void FunDevice::move(int x1, int x2, int id)
 
 void FunDevice::sendText(QString text)
 {
-    action->sendText(text);
+    action->sendText(text.toUtf8());
 }
 
 void FunDevice::sendtextEx(QString text)
 {
-    action->sendTextEx(text);
+    action->sendTextEx(text.toUtf8());
 }

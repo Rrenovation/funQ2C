@@ -20,9 +20,9 @@ QString FunQ2C::ver() const
 {
     return Version;
 }
-void FunQ2C::startServer()
+bool FunQ2C::startServer(int port)
 {
-    mServer->startServer();
+    return mServer->startServer(port);
 }
 
 FunDevice *FunQ2C::pushNewDevice(QString deviceName)

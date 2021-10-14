@@ -37,6 +37,8 @@ aux_source_directory(${PROJECT_SOURCE_DIR}/functionQ/scrcpy/controller Controlle
 
 add_library(${PROJECT_NAME} SHARED
     main.cpp
+    funAdb.h
+    funAdb.cpp
     funDevice.h
     funDevice.cpp
     funQ2C.h

@@ -20,7 +20,7 @@ signals:
 
 public slots:
     QString ver() const;
-    void startServer();
+    bool startServer(int port=37321);
     FunDevice* pushNewDevice(QString deviceName);
     void popDevice(QString deviceName);
 private:

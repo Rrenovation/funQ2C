@@ -1,11 +1,12 @@
 #ifndef _FUNDEVICE_H
 #define _FUNDEVICE_H
 
+#pragma execution_character_set("utf-8")
+
 #include <QAxFactory>
 #include <QPixmap>
 #include "../functionQ/scrcpy/device.h"
 #include "../functionQ/scrcpy/controller/action.h"
-#include "../functionQ/scrcpy/adbprocess.h"
 
 //定义相应的bmp数据头结构体
 #pragma pack(1)
