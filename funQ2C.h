@@ -24,7 +24,7 @@ public slots:
     FunDevice* pushNewDevice(QString deviceName);
     void popDevice(QString deviceName);
 private:
-    const QString Version = "1.0.0";
+    const QString Version = "1.0.1";
     Server *mServer = Q_NULLPTR;
     QMap<QString,FunDevice*> Devices;
 };

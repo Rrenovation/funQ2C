@@ -63,7 +63,7 @@ QString FunAdb::Uiautomator()
             ret.push_back(vaule);
             ret.push_back("|");
         }
-        ret.push_back("\n");
+        ret.push_back("\r\n");
     }
     return ret;
 }
@@ -79,7 +79,7 @@ QString FunAdb::UiFind(QString text, int type)
             ret.push_back(value);
             ret.push_back("|");
         }
-        ret.push_back("\n");
+        ret.push_back("\r\n");
     }
     return ret;
 }
@@ -95,7 +95,7 @@ QString FunAdb::UiGetBounds(QString text, int type)
             ret.push_back(QString::number(value));
             ret.push_back("|");
         }
-        ret.push_back("\n");
+        ret.push_back("\r\n");
     }
     return ret;
 }
